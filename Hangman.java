@@ -1,5 +1,8 @@
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.HashSet;
+
+// kommentar für pushhttps://github.com/lidsta87/Respo_Stanic.git
 
 public class Hangman {
     public static void main(String[] args) {
@@ -7,9 +10,8 @@ public class Hangman {
         String[] wordList = {"java", "programmieren", "entwickler", "hangman", "code"};
         String word = wordList[(int) (Math.random() * wordList.length)]; // Zufälliges Wort auswählen
         char[] guessedWord = new char[word.length()];
-        for (int i = 0; i < guessedWord.length; i++) {
-            guessedWord[i] = '_'; // Platzhalter
-        }
+        // Platzhalter
+        Arrays.fill(guessedWord, '_');
 
         int attempts = 6; // Maximale Versuche
         HashSet<Character> guessedLetters = new HashSet<>(); // Geratene Buchstaben
